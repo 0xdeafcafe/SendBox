@@ -46,16 +46,19 @@ namespace SendBox.XboxCommunication
 
 		private void InitalizeTags()
 		{
-			_tagEntries.Add(new TagEntry
+			_tagEntries = new List<TagEntry>
 			{
-				TagClass = "weap",
-				TagName = "",
-				TagAliasNames = new List<string>
+				new TagEntry
 				{
-					"assault rifle",
-					"assault gun"
+					TagClass = "weap",
+					TagName = "",
+					TagAliasNames = new List<string>
+					{
+						"assault rifle",
+						"assault gun"
+					}
 				}
-			});
+			};
 		}
 
 		/// <summary>
