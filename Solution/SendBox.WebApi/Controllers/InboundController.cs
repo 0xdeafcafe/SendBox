@@ -22,8 +22,8 @@ namespace SendBox.WebApi.Controllers
 			// Check we doin this Halo thing
 			if (email.Subject.ToLowerInvariant().Trim() != "halo") goto end;
 
-
-
+			// Send the command to the memory manager and parser
+			WebApiApplication.XboxMemoryManager.ParseTextCommand(email.Text);
 
 		end:
 			return new HttpStatusCodeResult(HttpStatusCode.OK);

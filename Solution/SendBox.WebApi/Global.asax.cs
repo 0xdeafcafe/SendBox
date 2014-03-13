@@ -17,7 +17,7 @@ namespace SendBox.WebApi
 			RouteConfig.RegisterRoutes(RouteTable.Routes);
 			BundleConfig.RegisterBundles(BundleTable.Bundles);
 
-			XboxMemoryManager = new MemoryManager();
+			XboxMemoryManager = new MemoryManager(HttpContext.Current.Server.MapPath("~/"));
 		}
 
 		public static MemoryManager XboxMemoryManager;
